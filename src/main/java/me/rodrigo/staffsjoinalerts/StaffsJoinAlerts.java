@@ -85,6 +85,7 @@ public class StaffsJoinAlerts {
 
     @Subscribe
     private void onServerPreConnect(ServerPreConnectEvent e) {
+        if (e.getPreviousServer() != null) return;
         proxy.getScheduler().buildTask(this, () -> {
             if (config == null) return;
             if (!e.getPlayer().hasPermission("staffjoinalert.use")) {
