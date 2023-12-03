@@ -9,15 +9,14 @@ import java.io.FileNotFoundException;
 
 public class ReloadCommandBukkit implements CommandExecutor {
 
-    private final BukkitStaffJoinAlert basePlugin;
+    private final BukkitStaffJoinAlert plugin;
     public ReloadCommandBukkit(BukkitStaffJoinAlert basePlugin) {
-        this.basePlugin = basePlugin;
+        this.plugin = basePlugin;
     }
 
     @Override
     public boolean onCommand(@NotNull org.bukkit.command.CommandSender sender, @NotNull org.bukkit.command.Command command, @NotNull String label, @NotNull String[] args) {
         try {
-            final BukkitStaffJoinAlert plugin = basePlugin;
             if (sender instanceof org.bukkit.entity.Player) {
                 sender.sendMessage(plugin.config.AsString("no_permission"));
                 return true;

@@ -10,17 +10,16 @@ import net.md_5.bungee.api.plugin.Command;
 import java.io.FileNotFoundException;
 
 public class ReloadCommandBungee extends Command {
-    private final BungeeStaffJoinAlert basePlugin;
+    private final BungeeStaffJoinAlert plugin;
 
     public ReloadCommandBungee(BungeeStaffJoinAlert basePlugin) {
         super("staffjoinalert");
-        this.basePlugin = basePlugin;
+        this.plugin = basePlugin;
     }
 
     @Override
     public void execute(CommandSender sender, String[] args) {
         try {
-            final BungeeStaffJoinAlert plugin = (BungeeStaffJoinAlert) basePlugin;
             if (sender instanceof ProxiedPlayer) {
                 sender.sendMessage(TextComponent.fromLegacyText(plugin.config.AsString("no_permission")));
                 return;
