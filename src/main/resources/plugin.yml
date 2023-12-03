@@ -1,6 +1,6 @@
 name: StaffJoinAlert
 version: '${project.version}'
-main: me.rodrigo.staffjoinalert.bukkit.BukkitStaffJoinAlert
+main: me.rodrigo.staffsjoinalerts.bukkit.BukkitStaffJoinAlert
 # api-version: '1.20'
 author: "Rodrigo R."
 commands:

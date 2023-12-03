@@ -1,4 +1,4 @@
-package me.rodrigo.staffjoinalert.network;
+package me.rodrigo.staffsjoinalerts.network;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,17 +1,17 @@
-package me.rodrigo.staffjoinalert;
+package me.rodrigo.staffsjoinalerts;
 
 import com.google.inject.Inject;
-import com.velocitypowered.api.event.connection.DisconnectEvent;
-import com.velocitypowered.api.event.player.ServerPreConnectEvent;
 import com.velocitypowered.api.event.proxy.ProxyInitializeEvent;
 import com.velocitypowered.api.event.Subscribe;
 import com.velocitypowered.api.plugin.Plugin;
+import com.velocitypowered.api.event.connection.DisconnectEvent;
+import com.velocitypowered.api.event.player.ServerPreConnectEvent;
 import com.velocitypowered.api.plugin.annotation.DataDirectory;
 import com.velocitypowered.api.proxy.ProxyServer;
-import me.rodrigo.staffjoinalert.fusion.ReloadCommand;
-import me.rodrigo.staffjoinalert.lib.Parser;
-import me.rodrigo.staffjoinalert.lib.RegisteredPlayer;
-import me.rodrigo.staffjoinalert.network.Http;
+import me.rodrigo.staffsjoinalerts.fusion.ReloadCommand;
+import me.rodrigo.staffsjoinalerts.lib.Parser;
+import me.rodrigo.staffsjoinalerts.lib.RegisteredPlayer;
+import me.rodrigo.staffsjoinalerts.network.Http;
 import net.kyori.adventure.text.Component;
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.LuckPermsProvider;
@@ -23,22 +23,23 @@ import java.net.URL;
 import java.nio.file.Path;
 
 @Plugin(
-        id = "staffjoinalert",
-        name = "StaffJoinAlert",
-        version = BuildConstants.VERSION,
+        id = "staffsjoinalerts",
+        name = "StaffsJoinAlerts",
+        version = "1.0-SNAPSHOT",
         authors = {"Rodrigo R."},
         description = "Broadcasts to online staff members when staff members join/leave the server."
 )
-public class StaffJoinAlert {
+public class StaffsJoinAlerts {
+
     @Inject
-    public final Logger logger;
+    public Logger logger;
     private final ProxyServer proxy;
     private LuckPerms luckPerms;
     public Parser config;
     public Path dataFolder;
 
     @Inject
-    public StaffJoinAlert(ProxyServer proxy, Logger logger, @DataDirectory Path dataFolder) {
+    public StaffsJoinAlerts(ProxyServer proxy, Logger logger, @DataDirectory Path dataFolder) {
         this.proxy = proxy;
         this.logger = logger;
         this.dataFolder = dataFolder;

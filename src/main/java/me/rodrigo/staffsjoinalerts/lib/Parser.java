@@ -1,4 +1,4 @@
-package me.rodrigo.staffjoinalert.lib;
+package me.rodrigo.staffsjoinalerts.lib;
 
 import org.yaml.snakeyaml.Yaml;
 

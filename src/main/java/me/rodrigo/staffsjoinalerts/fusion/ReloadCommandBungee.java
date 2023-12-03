@@ -1,7 +1,7 @@
-package me.rodrigo.staffjoinalert.fusion;
+package me.rodrigo.staffsjoinalerts.fusion;
 
-import me.rodrigo.staffjoinalert.bungee.BungeeStaffJoinAlert;
-import me.rodrigo.staffjoinalert.lib.Parser;
+import me.rodrigo.staffsjoinalerts.bungee.BungeeStaffJoinAlert;
+import me.rodrigo.staffsjoinalerts.lib.Parser;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
@@ -21,11 +21,11 @@ public class ReloadCommandBungee extends Command {
     public void execute(CommandSender sender, String[] args) {
         try {
             if (sender instanceof ProxiedPlayer) {
-                sender.sendMessage(TextComponent.fromLegacyText(plugin.config.AsString("no_permission")));
+                sender.sendMessage(TextComponent.fromLegacyText(plugin.config.AsString("no_permission").replaceAll("&", "§")));
                 return;
             }
             plugin.config = new Parser(plugin.getDataFolder().toPath().resolve("config.yml"));
-            plugin.getLogger().info(plugin.config.AsString("config_reloaded"));
+            plugin.getLogger().info(plugin.config.AsString("config_reloaded").replaceAll("&", "§"));
         } catch (FileNotFoundException e) {
             throw new RuntimeException("Failed to reload config!", e);
         }

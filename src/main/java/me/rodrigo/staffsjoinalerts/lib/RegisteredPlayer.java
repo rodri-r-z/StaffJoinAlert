@@ -1,4 +1,4 @@
-package me.rodrigo.staffjoinalert.lib;
+package me.rodrigo.staffsjoinalerts.lib;
 
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.model.user.User;

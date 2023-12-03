@@ -1,6 +1,6 @@
-package me.rodrigo.staffjoinalert.bungee;
+package me.rodrigo.staffsjoinalerts.bungee;
 
-import me.rodrigo.staffjoinalert.fusion.ReloadCommandBungee;
+import me.rodrigo.staffsjoinalerts.fusion.ReloadCommandBungee;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.event.PlayerDisconnectEvent;
@@ -8,9 +8,9 @@ import net.md_5.bungee.api.event.PostLoginEvent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.api.plugin.Plugin;
 
-import me.rodrigo.staffjoinalert.lib.Parser;
-import me.rodrigo.staffjoinalert.lib.RegisteredPlayer;
-import me.rodrigo.staffjoinalert.network.Http;
+import me.rodrigo.staffsjoinalerts.lib.Parser;
+import me.rodrigo.staffsjoinalerts.lib.RegisteredPlayer;
+import me.rodrigo.staffsjoinalerts.network.Http;
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.LuckPermsProvider;
 import net.md_5.bungee.event.EventHandler;
@@ -133,3 +133,4 @@ public class BungeeStaffJoinAlert extends Plugin implements Listener {
         });
     }
 }
+
