@@ -8,7 +8,10 @@ Setup: Just add the plugin into your plugins folder!
 
 [**Open source**](https://github.com/rodri-r-z/StaffJoinAlert)
 
-[SPOILER="Default config"]# StaffJoinAlert
+**Default config**
+
+```yml
+# StaffJoinAlert
 # By: Rodrigo R.
 # Version 1.0
 
@@ -27,3 +30,4 @@ no_permission: "&b[StaffJoinAlert] &cYou don't have permission to use this comma
 # Only console can reload the config
 # Permissions to alerts:
 # staffjoinalert.use[/SPOILER]
+```
