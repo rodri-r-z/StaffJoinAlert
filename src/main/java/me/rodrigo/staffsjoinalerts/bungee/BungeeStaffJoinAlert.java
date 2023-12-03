@@ -49,10 +49,15 @@ public class BungeeStaffJoinAlert extends Plugin implements Listener {
                 final FileWriter writer = new FileWriter(dataFolder.resolve("config.yml").toFile());
                 writer.write(config);
                 writer.close();
-                this.config = new Parser(dataFolder.resolve("config.yml"));
             } catch (IOException e) {
                 logger.severe("Failed to create/read config file! Error:"+e);
             }
+        }
+
+        try {
+            this.config = new Parser(dataFolder.resolve("config.yml"));
+        } catch (IOException e) {
+            logger.severe("Failed to read config file! Error: "+e);
         }
 
         if (config == null) return;

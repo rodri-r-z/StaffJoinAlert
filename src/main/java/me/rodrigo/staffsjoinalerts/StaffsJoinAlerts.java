@@ -59,10 +59,14 @@ public class StaffsJoinAlerts {
                 final FileWriter writer = new FileWriter(dataFolder.resolve("config.yml").toFile());
                 writer.write(config);
                 writer.close();
-                this.config = new Parser(dataFolder.resolve("config.yml"));
             } catch (IOException e) {
-                logger.error("Failed to create/read config file! Error: "+e);
+                logger.error("Failed to create config file! Error: "+e);
             }
+        }
+        try {
+            this.config = new Parser(dataFolder.resolve("config.yml"));
+        } catch (IOException e) {
+            logger.error("Failed to read config file! Error: "+e);
         }
     }
 
