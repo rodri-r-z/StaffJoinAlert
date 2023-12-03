@@ -4,7 +4,10 @@ Broadcasts to online staff members when staff members join/leave the server.
 
 **Depends on:** [LuckPerms](https://luckperms.net/download)
 
-Setup: Just add the plugin into your plugins folder!
+**Setup:**
+- Download LuckPerms and put it into your plugins folder
+- Download the plugin and put it into your plugins folder
+- Restart your server
 
 [**Open source**](https://github.com/rodri-r-z/StaffJoinAlert)
 [**Get this resource on Spigot**](https://www.spigotmc.org/resources/staffs-join-alerts-bungee-spigot-bukkit-broadcast-alerts-to-staffs-when-staffs-joins.113824/)
