@@ -68,7 +68,7 @@ public class StaffJoinAlert {
     @Subscribe
     public void onProxyInitialization(ProxyInitializeEvent event) {
         if (config == null) return;
-        if (config.AsBoolean("use_luckperms_api") && proxy.getPluginManager().getPlugin("LuckPerms").isEmpty()) {
+        if (config.AsBoolean("use_luckperms_api") && proxy.getPluginManager().getPlugin("luckperms").isEmpty()) {
             logger.error("LuckPerms is not installed! StaffJoinAlert will not work.");
             return;
         }
