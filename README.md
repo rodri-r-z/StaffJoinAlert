@@ -6,11 +6,11 @@ Broadcasts to online staff members when staff members join/leave the server.
 
 **Setup:**
 - [Download LuckPerms](https://luckperms.net/download) and put it into your plugins folder
-- [Download the plugin](https://www.spigotmc.org/resources/staffs-join-alerts-bungee-bukkit-velocity-broadcast-alerts-to-staffs-when-staffs-joins.113824/) and put it into your plugins folder
+- [Download the plugin](https://www.spigotmc.org/resources/staffs-join-alerts-bungee-paper-velocity-spigot-broadcast-alerts-to-staffs-when-staffs-joins.113824/) and put it into your plugins folder
 - Restart your server
 
 [**Open source**](https://github.com/rodri-r-z/StaffJoinAlert)
-[**Get this resource on Spigot**](https://www.spigotmc.org/resources/staffs-join-alerts-bungee-bukkit-velocity-broadcast-alerts-to-staffs-when-staffs-joins.113824/)
+[**Get this resource on Spigot**](https://www.spigotmc.org/resources/staffs-join-alerts-bungee-paper-velocity-spigot-broadcast-alerts-to-staffs-when-staffs-joins.113824/)
 
 **Default config**
 
