@@ -1,6 +1,5 @@
 package me.rodrigo.staffjoinalert.bukkit;
 
-import me.rodrigo.staffjoinalert.fusion.ReloadCommand;
 import me.rodrigo.staffjoinalert.fusion.ReloadCommandBukkit;
 import me.rodrigo.staffjoinalert.lib.Parser;
 import me.rodrigo.staffjoinalert.lib.RegisteredPlayer;
@@ -40,7 +39,7 @@ public class BukkitStaffJoinAlert extends JavaPlugin implements Listener {
 
         if (!dataFolder.resolve("config.yml").toFile().exists()) {
             try {
-                final String config = Http.getFileContentByUrl(new URL("https://raw.githubusercontent.com/rodrigor/StaffJoinAlert/main/src/main/resources/config.yml"));
+                final String config = Http.getFileContentByUrl(new URL("https://raw.githubusercontent.com/rodri-r-z/StaffJoinAlert/main/src/main/resources/config.yml"));
                 if (!dataFolder.resolve("config.yml").toFile().createNewFile()) {
                     logger.severe("Failed to create config file!");
                     return;

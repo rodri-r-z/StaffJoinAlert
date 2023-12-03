@@ -50,7 +50,7 @@ public class StaffJoinAlert {
 
         if (!dataFolder.resolve("config.yml").toFile().exists()) {
             try {
-                final String config = Http.getFileContentByUrl(new URL("https://raw.githubusercontent.com/rodrigor/StaffJoinAlert/main/src/main/resources/config.yml"));
+                final String config = Http.getFileContentByUrl(new URL("https://raw.githubusercontent.com/rodri-r-z/StaffJoinAlert/main/src/main/resources/config.yml"));
                 if (!dataFolder.resolve("config.yml").toFile().createNewFile()) {
                     logger.error("Failed to create config file!");
                     return;
