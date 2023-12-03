@@ -1,5 +1,5 @@
   name: "StaffJoinAlert"
   main: me.rodrigo.staffjoinalert.bungee.BungeeStaffJoinAlert
   version: "1.0-SNAPSHOT"
-  authors: ["Rodrigo R."]
   description: "Broadcasts to online staff members when staff members join/leave the server."
+  author: "Rodrigo R."
