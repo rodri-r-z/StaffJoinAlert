@@ -1,0 +1,8 @@
+name: StaffJoinAlert
+version: '${project.version}'
+main: me.rodrigo.staffjoinalert.bukkkit.BukkitStaffJoinAlert
+# api-version: '1.20'
+commands:
+  staffjoinalert:
+    usage: "/staffjoinalert"
+    description: "Reload config"
