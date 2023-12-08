@@ -19,7 +19,9 @@ import org.slf4j.Logger;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
+import java.nio.file.Files;
 import java.nio.file.Path;
 
 @Plugin(
@@ -51,14 +53,12 @@ public class StaffsJoinAlerts {
 
         if (!dataFolder.resolve("config.yml").toFile().exists()) {
             try {
-                final String config = Http.getFileContentByUrl(new URL("https://raw.githubusercontent.com/rodri-r-z/StaffJoinAlert/main/src/main/resources/config.yml"));
+                final InputStream stream = getClass().getResourceAsStream("config.yml");
                 if (!dataFolder.resolve("config.yml").toFile().createNewFile()) {
-                    logger.error("Failed to create config file!");
+                    logger.error("Failed to get config file!");
                     return;
                 }
-                final FileWriter writer = new FileWriter(dataFolder.resolve("config.yml").toFile());
-                writer.write(config);
-                writer.close();
+                Files.copy(stream, dataFolder.resolve("config.yml").toFile().toPath());
             } catch (IOException e) {
                 logger.error("Failed to create config file! Error: "+e);
             }

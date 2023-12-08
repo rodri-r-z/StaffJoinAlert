@@ -17,7 +17,9 @@ import net.md_5.bungee.event.EventHandler;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.logging.Logger;
 
@@ -41,14 +43,12 @@ public class BungeeStaffJoinAlert extends Plugin implements Listener {
 
         if (!dataFolder.resolve("config.yml").toFile().exists()) {
             try {
-                final String config = Http.getFileContentByUrl(new URL("https://raw.githubusercontent.com/rodri-r-z/StaffJoinAlert/main/src/main/resources/config.yml"));
+                final InputStream stream = getResourceAsStream("config.yml");
                 if (!dataFolder.resolve("config.yml").toFile().createNewFile()) {
-                    logger.severe("Failed to create config file!");
+                    logger.severe("Failed to get config file!");
                     return;
                 }
-                final FileWriter writer = new FileWriter(dataFolder.resolve("config.yml").toFile());
-                writer.write(config);
-                writer.close();
+                Files.copy(stream, dataFolder.resolve("config.yml").toFile().toPath());
             } catch (IOException e) {
                 logger.severe("Failed to create/read config file! Error:"+e);
             }
