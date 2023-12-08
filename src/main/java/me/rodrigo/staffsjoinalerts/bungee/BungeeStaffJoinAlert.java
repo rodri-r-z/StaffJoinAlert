@@ -10,7 +10,6 @@ import net.md_5.bungee.api.plugin.Plugin;
 
 import me.rodrigo.staffsjoinalerts.lib.Parser;
 import me.rodrigo.staffsjoinalerts.lib.RegisteredPlayer;
-import me.rodrigo.staffsjoinalerts.network.Http;
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.LuckPermsProvider;
 import net.md_5.bungee.event.EventHandler;

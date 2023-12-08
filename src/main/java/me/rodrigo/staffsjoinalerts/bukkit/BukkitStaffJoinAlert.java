@@ -3,7 +3,6 @@ package me.rodrigo.staffsjoinalerts.bukkit;
 import me.rodrigo.staffsjoinalerts.fusion.ReloadCommandBukkit;
 import me.rodrigo.staffsjoinalerts.lib.Parser;
 import me.rodrigo.staffsjoinalerts.lib.RegisteredPlayer;
-import me.rodrigo.staffsjoinalerts.network.Http;
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.LuckPermsProvider;
 import org.bukkit.Server;
