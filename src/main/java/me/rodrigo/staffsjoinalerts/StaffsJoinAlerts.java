@@ -53,7 +53,7 @@ public class StaffsJoinAlerts {
 
         if (!dataFolder.resolve("config.yml").toFile().exists()) {
             try {
-                final InputStream stream = getClass().getResourceAsStream("config.yml");
+                final InputStream stream = getClass().getClassLoader().getResourceAsStream("config.yml");
                 if (!dataFolder.resolve("config.yml").toFile().createNewFile()) {
                     logger.error("Failed to get config file!");
                     return;
